@@ -20,5 +20,9 @@ Automation outside Linux, that is internal.... go for python script
 shebang is first line of shell script
 you should inform linux server through shebang, how to execute the script 
 
+2. how to excute a command in shell script and take the output?
+
+
+
 
 
