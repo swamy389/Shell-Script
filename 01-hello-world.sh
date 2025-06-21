@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "print msg"
+echo "this is my first shell script"
