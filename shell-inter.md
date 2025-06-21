@@ -21,8 +21,10 @@ shebang is first line of shell script
 you should inform linux server through shebang, how to execute the script 
 
 2. how to excute a command in shell script and take the output?
-
-
+  
+shell script run the command inside $() and stores the output into varible called DATE.
+DATE=$(date)
+echo "hello, this script is excuted at timestamp: $DATE "
 
 
 
