@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 PERSON1=$1 #this is the first value of command line
 PERSON2=$2 #this is the second value of command line
 
