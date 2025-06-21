@@ -8,6 +8,6 @@ echo "username entered is $USERNAME"
 
 echo "please enter password"
 
-read PASSWORD #this is the value of the varible password entered
+read -s PASSWORD #this is the value of the varible password entered
 
 echo "password entered is: $PASSWORD"
