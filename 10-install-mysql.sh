@@ -22,3 +22,13 @@ then
 else 
    echo "installation of mysql is success"
 fi
+
+yum install python 3.12.0 -y 
+
+if [ $? -ne 0 ]
+then 
+   echo "installation of python is error"
+   exit 1
+else 
+   echo "installation of python is success"
+fi
