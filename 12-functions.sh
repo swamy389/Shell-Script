@@ -2,7 +2,11 @@
 
 #our program goal is to install nginx
 
-USERID=$(id -u)
+DATE=$(date)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/SCRIPT_NAME-$DATE.log
+
+
 VALIDATE () {
     if [ $1 -ne 0 ]
     then 
@@ -14,6 +18,9 @@ VALIDATE () {
 
 }
 
+USERID=$(id -u)
+
+
 if [ $USERID -ne 0 ]
 then 
    echo "ERROR:: can you please run this script with root access"
@@ -23,10 +30,10 @@ then
 fi
 
 #it is our responsibility to check installation of nginx is success or not 
-yum install nginx -y
+yum install nginx &>>$LOGFILE
 
 VALIDATE $?
 
-yum install maven -y 
+yum install maven &>>$LOGFILE
 
 VALIDATE $?
