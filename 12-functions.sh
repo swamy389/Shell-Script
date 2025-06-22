@@ -10,10 +10,10 @@ LOGFILE=/tmp/SCRIPT_NAME-$DATE.log
 VALIDATE () {
     if [ $1 -ne 0 ]
     then 
-       echo "Installation .... FAILURE"
+       echo "$2 .... FAILURE"
        exit 1
     else
-       echo "Installation .... SUCCESS"
+       echo "$2 .... SUCCESS"
     fi
 
 }
@@ -32,8 +32,8 @@ fi
 #it is our responsibility to check installation of nginx is success or not 
 yum install nginx &>>$LOGFILE
 
-VALIDATE $?
+VALIDATE $? "installation nginx"
 
 yum install maven &>>$LOGFILE
 
-VALIDATE $?
+VALIDATE $? "installation maven"
