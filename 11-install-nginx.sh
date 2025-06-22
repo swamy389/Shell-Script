@@ -12,4 +12,13 @@ then
 #    echo "INFO:: this is root user"
 fi
 
-yum install nginx -y
+#it is our responsibility to check installation of nginx is success or not 
+yum install nginxx -y
+
+if [ $? -ne 0 ]
+then 
+   echo "print install of mysql is error"
+   exit 1
+else
+   echo "installation of mysql is success"
+fi
