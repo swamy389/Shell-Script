@@ -1,5 +1,7 @@
-✅ Developed and maintained robust shell scripts utilizing variables, loops (for, while), and control structures (if/else, case) to automate repetitive tasks, improve system reliability, and streamline Linux operations.
-
 ✅ Implemented modular scripting solutions with reusable functions, proper shebangs, and robust error handling (exit status, redirection to logs) to enhance script maintainability and troubleshooting efficiency across multiple projects.
 
-✅ Enhanced automation workflows by leveraging command substitution, special variables, and logging best practices, resulting in a significant reduction in manual intervention and increased overall process stability
+Developed and automated Bash scripts to manage disk usage by deleting old log files and scheduling tasks via crontab, ensuring optimal system performance and reducing manual intervention.
+
+Implemented automated email notifications using sed for message formatting and Gmail SMTP on Linux servers, enabling proactive alerts for disk utilization and other system events
+
+Provisioned and managed AWS EC2 instances for Roboshop, leveraging shell scripts to automate environment setup, MongoDB configuration, and deployment of microservices for a reliable and scalable application infrastructure.
