@@ -32,9 +32,9 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>> $LOGFILE
 
 VALIDATE $? "Setup NodeJS repos"
 
-yum install install nodejs -y &>> $LOGFILE
+yum install nodejs -y &>> $LOGFILE
 
-VALIDATE $? "Install NodeJS"
+VALIDATE $? "Installing NodeJS"
 
 useradd roboshop &>> $LOGFILE
 
