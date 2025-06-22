@@ -23,7 +23,7 @@ else
    echo "installation of mysql is success"
 fi
 
-yum install python 3.12.0 -y 
+yum install python -y 
 
 if [ $? -ne 0 ]
 then 
