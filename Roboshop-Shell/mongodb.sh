@@ -36,11 +36,11 @@ VALIDATE $? "Copied MongoDb repo into yum.repos.d"
 
 VALIDATE $? "Installation of MongoDB"
 
-systemctl enable mongod &>>$LOGFILE
+systemctl enable mongodb &>>$LOGFILE
 
 VALIDATE $? "Enable MongoDB"
 
-systemctl start mongod &>>$LOGFILE
+systemctl start mongodb &>>$LOGFILE
 
 VALIDATE $? "Start MongoDB"
 
