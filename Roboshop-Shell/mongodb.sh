@@ -36,13 +36,13 @@ VALIDATE $? "Copied MongoDb repo into yum.repos.d"
 
 VALIDATE $? "Installation of MongoDB"
 
-systemctl enable mongod &>>$LOGFILE
+# systemctl enable mongod &>>$LOGFILE
 
-VALIDATE $? "Enable MongoDB"
+# VALIDATE $? "Enable MongoDB"
 
-# systemctl start mongod &>>$LOGFILE
+systemctl start mongod &>>$LOGFILE
 
-# VALIDATE $? "Start MongoDB"
+VALIDATE $? "Start MongoDB"
 
 # sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>$LOGFILE
 
