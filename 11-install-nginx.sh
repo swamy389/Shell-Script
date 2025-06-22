@@ -23,7 +23,7 @@ else
    echo "installation of nginx is success"
 fi
 
-yum install mavennn -y 
+yum install maven -y 
 
 if[ $? -ne 0 ]
 then 
