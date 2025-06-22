@@ -40,14 +40,14 @@ systemctl enable mongod &>>$LOGFILE
 
 VALIDATE $? "Enable MongoDB"
 
-systemctl start mongod &>>$LOGFILE
+# systemctl start mongod &>>$LOGFILE
 
-VALIDATE $? "Start MongoDB"
+# VALIDATE $? "Start MongoDB"
 
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>$LOGFILE
+# sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>$LOGFILE
 
-VALIDATE $? "Enable Mongod Conf"
+# VALIDATE $? "Enable Mongod Conf"
 
-systemctl restart mongod &>>$LOGFILE
+# systemctl restart mongod &>>$LOGFILE
 
-VALIDATE $? "Restarting MongoDB"
+# VALIDATE $? "Restarting MongoDB"
