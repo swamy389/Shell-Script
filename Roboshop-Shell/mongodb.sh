@@ -38,9 +38,9 @@ VALIDATE $? "Installation of MongoDB"
 
 systemctl enable mongod &>>$LOGFILE
 
-VALIDATE $? "Enable Mongod"
+VALIDATE $? "Enable MongoDB"
 
-systemctl start mongodb &>>$LOGFILE
+systemctl start mongod &>>$LOGFILE
 
 VALIDATE $? "Start MongoDB"
 
