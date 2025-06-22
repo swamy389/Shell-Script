@@ -26,5 +26,11 @@ shell script run the command inside $() and stores the output into varible calle
 DATE=$(date)
 echo "hello, this script is excuted at timestamp: $DATE "
 
+3. what is exit status?
 
+$? ----> it will store the previous command status 
 
+$? ---> if $? is equal to 0 then previous command is success
+
+$? ---> if $? is not equal to 0 then previous command is failure
+(1 to 127)
