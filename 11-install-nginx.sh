@@ -13,12 +13,12 @@ then
 fi
 
 #it is our responsibility to check installation of nginx is success or not 
-yum install nginxx -y
+yum install nginx -y
 
 if [ $? -ne 0 ]
 then 
-   echo "print install of mysql is error"
+   echo "print install of nginx is error"
    exit 1
 else
-   echo "installation of mysql is success"
+   echo "installation of nginx is success"
 fi
