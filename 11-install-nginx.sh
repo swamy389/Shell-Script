@@ -2,7 +2,23 @@
 
 #our program goal is to install nginx
 
+DATE=$(date)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/SCRIPT_NAME-$DATE.log
+
 USERID=$(id -u)
+VALIDATE () {
+    if [ $? -ne 0 ]
+    then 
+       echo "$2 ... FAILURE"
+       exit 1
+    else
+       echo "$2 ... SUCCESS"
+fi
+
+}
+
+
 
 if [ $USERID -ne 0 ]
 then 
@@ -13,21 +29,10 @@ then
 fi
 
 #it is our responsibility to check installation of nginx is success or not 
-yum install nginx -y
+yum install nginx &>>$LOGFILE
 
-if [ $? -ne 0 ]
-then 
-   echo "print install of nginx is error"
-   exit 1
-else
-   echo "installation of nginx is success"
-fi
+VALIDATE $? "installation of nginx"
 
-yum install maven -y 
+yum install maven &>>$LOGFILE
 
-if[ $? -ne 0 ]
-then 
-   echo "installation of maven is error"
-else
-   echo "installation of maven is success"
-fi
+VALIDATE $? "installation of maven"
