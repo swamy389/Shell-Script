@@ -23,12 +23,12 @@ else
    echo "installation of mysql is success"
 fi
 
-yum install python -y 
+yum install postfix -y 
 
 if [ $? -ne 0 ]
 then 
-   echo "installation of python is error"
+   echo "installation of postfix is error"
    exit 1
 else 
-   echo "installation of python is success"
+   echo "installation of postfix is success"
 fi
