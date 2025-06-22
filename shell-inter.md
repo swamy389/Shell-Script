@@ -34,3 +34,7 @@ $? ---> if $? is equal to 0 then previous command is success
 
 $? ---> if $? is not equal to 0 then previous command is failure
 (1 to 127)
+
+by default shell script understand the previous command success or not it is our responsibility to check that is through the exit status if it is 0 
+we can consider at is succes when it is not 0 we can consider at it is failure
+so we will exit shell scrpt whenever it is face the errors.
