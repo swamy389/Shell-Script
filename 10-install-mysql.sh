@@ -2,7 +2,21 @@
 
 #our program goal is to install mysql 
 
+DATE=$(date)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/SCRIPT_NAME-$DATE.log
+
 USERID=$(id -u)
+VALIDATE () {
+    if [ $1 -ne 0 ]
+    then 
+       echo "$2 ... FAILURE"
+       exit 1
+    else 
+       echo "$2... SUCCESS"
+    fi
+
+}
 
 if [ $USERID -ne 0 ]
 then 
@@ -13,22 +27,11 @@ then
 fi
 
 #it is our responsibility to check installation of mysql is success or not
-yum install mysql -y
+yum install mysql &>>$LOGFILE
 
-if [ $? -ne 0 ]
-then 
-   echo "installation of mysql is error"
-   exit 1
-else 
-   echo "installation of mysql is success"
-fi
+VALIDATE $? "installation of mysql"
 
-yum install postfix -y 
+yum install postfix &>>$LOGFILE 
 
-if [ $? -ne 0 ]
-then 
-   echo "installation of postfix is error"
-   exit 1
-else 
-   echo "installation of postfix is success"
-fi
+VALIDATE $? "installation of postfix"
+
