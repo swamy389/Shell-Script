@@ -50,7 +50,7 @@ VALIDATE $? "Moving into /app Directory"
 
 unzip /tmp/catalogue.zip $LOGFILE
 
-VALIDATE $? "unzipping catalogue artifact"
+VALIDATE $? "unzipping catalogue"
 
 npm install &>> $LOGFILE
 
