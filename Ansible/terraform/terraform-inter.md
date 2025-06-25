@@ -35,3 +35,6 @@ imperative/declarative:--
 
 terrarom is a popular declarative scripting for infrastructure automation
 declarative means easy syntax, no need of sequence execution, we will get it what are we write if we follow syntax.
+
+
+HCL --> hashicorp configuration language
